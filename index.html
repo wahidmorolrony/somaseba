@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title> বয়স্ক, বিধবা ও প্রতিবন্ধি ভাতার মোবাইল নম্বর পরিবর্তন ফরম </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h3 style="text-align: center;">সকল তথ্য পুরণ করে সাবমিট বাটনে ক্লিক করে দেখুন তথ্য সঠিক আছে কি না? </h3>
+  <h3 style="text-align: center;">এরপর আবেদনপত্র প্রিন্ট করুন বাটনে ক্লিক করুন </h3>
+
+
+  <form id="certForm" onsubmit="generateCertificates(); return false;">
+   <div class="form-group">
+   <label>নাম:</label>
+   <input type="text" id="name" placeholder="নাম লিখুন"><br><br>
+    </div> 
+
+    <div class="form-group">
+    <label>পিতার নাম:</label>
+    <input type="text" id="father" placeholder="পিতার নাম লিখুন"><br><br>
+    </div>
+
+    <div class="form-group">
+    <label> মাতার নাম:</label>
+    <input type="text" id="mother" placeholder="মাতার নাম লিখুন"><br><br>
+    </div>
+
+    <div class="form-group">
+    <label>জাতীয় পরিচয়পত্র নং </label>
+    <input type="text" id="nid" placeholder="জাতীয় পরিচয়পত্রের নম্বর লিখুন"><br><br>
+    </div>
+
+    <div class="form-group">
+    <label>ইউনিয়নরে নামঃ </label>
+    <input type="text" id="union" placeholder="ইউনিয়নের নাম লিখুন"><br><br>
+    </div>
+
+    <div class="form-group">
+    <label>ওয়ার্ড নং </label>
+    <input type="text" id="word" placeholder="ওয়ার্ড নম্বর লিখুন"><br><br>
+    </div>
+
+    <div class="form-group">
+    <label>প্রাপ্ত ভাতার নাম </label>
+    <input type="text" id="bhata" placeholder="(বয়স্ক, বিধবা, প্রতিবন্ধী)"><br><br>
+    </div>
+
+    <div class="form-group">
+    <label> বর্তমান ব্যবহৃত মোবাইল নম্বরঃ</label>
+    <input type="text" id="onumber" placeholder="বর্তমান ভাতায় ব্যবহৃত মোবাইল নম্বর"><br><br>
+    </div>
+    
+    <div class="form-group">
+    <label>নিজের মোবাইল নম্বরঃ</label>
+    <input type="text" id="pnumber" placeholder=" নিজ নামে নিবন্ধিত মোবাইল নম্বর "><br><br>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <hr>
+<p>
+
+  <div id="cert1" style="display:none;">
+    <p><u>আবেদনকারীর অংশ</u></p>
+    <p style="line-height: 2px;">বরাবর,</p>
+    <p style="line-height: 2px;">উপজেলা সমাজসেবা অফিসার,</p>
+    <p style="line-height: 2px;">দিঘলিয়া, খুলনা।</p>
+          
+    <p> <b> বিষয়: </b><u>মোবাইল ফাইন্যাসিয়াল সার্ভিস(MFS) হিসাব নম্বর পরিবর্তন।</u></p>
+    <p>জনাব, </p>
+    <p style="text-indent: 40px; text-align: justify;"> বিনীত নিবেদন এই যে, আমি <b><span id="showName1"></span></b>, 
+    মাতা: <b><span id="showMother"></span></b>, পিতা/স্বামী: <b><span id="showFather"></span></b>, 
+    জাতীয় পরিচয়পত্র/জন্ম নিবন্ধন নম্বর নং:<b><span id="showNid"></span></b>। ইউনিয়নের নামঃ <b><span id="showUnion"></span></b>, ওয়ার্ড নম্বরঃ <b><span id="showWord"></span></b>। 
+    আমি আপনার উপজেলা সমাজসেবা অফিসের আওতাভুক্ত একজন <b><span id="showBhata"></span></b> ভাতাভোগাী। আমি আমার নিজ নামে সিম নিবন্ধন না থাকার,কারণে পূর্বে ব্যবহৃত মোবাইল,
+    মোবাইল হিসাব নম্বর <b><span id="showOnumber"></span></b> এর পরিবর্তে বর্তমান মোবাইল নম্বর (বাংলায়) <b><span id="showPnumber1"></span></b>, (ইংরাজীতে)<b><span id="showPnumber2"></span></b> নগদ/বিকাশ হিসাব খুলে এমআইএস এ সংযুক্ত করার জন্য অনুরোধ জানাচ্ছি।
+    <p>সংযুক্ত জাতীয় পরিচয়পত্র/জন্ম নিবন্ধনের ফটোকপি।</p>
+    
+    <p style="text-indent: 70%;">আবেদনকারীর স্বাক্ষর/টিপসহি,</p>
+    <br><br>
+    
+    <p> <u><b>সমাজসেবা অফিসের অংশ</b></u><p>
+    <p> অফিস রেকর্ড অনুযায়ী বর্নিত আবেদনকারীর(উপকারভোগাী) তথ্য সঠিক পাওয়া যায়। তার এমআইএস </p>
+    <p>নম্বর.......................................................।</p>
+    <p>আবেদনকৃত মোবাইল নম্বরে নগদ/বিকাশ হিসাব খোলার জন্য সুপারিশ করছি।</p>
+    <p>সনাক্তকারি ইউনিয়ন সমাজকর্মী/ কারিগরি প্রশিক্ষকে স্বাক্ষর ও সীল</p>
+    <br><br>
+    <p style="text-indent: 60%; line-height: 5px;">সমাজসেবা অফিসারের স্বাক্ষর ও সীল</p>
+
+    <p>..................</p>
+    <p style="line-height: 2px;">প্রতিনিধি</p>
+    <p style="line-height: 2px;">নগদ/বিকাশ</p>
+    <p style="line-height: 2px;">..................</p>
+
+    </div>
+  
+    <button onclick="printCertificate('cert1')">আবেদনপত্র প্রিন্ট করুন</button>
+
+  <hr>
+
+  <div id="cert2" style="display:none;">
+      
+  
+     
+</div>
+    <button onclick="printCertificate('cert2')">এখানে ক্লিক করার প্রয়োজন নাই</button>
+  
+  <script src="index.js"></script>
+</body>
+</html>
